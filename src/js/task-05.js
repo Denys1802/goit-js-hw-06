@@ -6,5 +6,10 @@ inputEl.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
 	console.log(event.currentTarget.value);
-	nameLabelEl.textContent = event.currentTarget.value;
+	if (event.currentTarget.value === '') {
+		//console.log(nameLabelEl.textContent);
+		return nameLabelEl.textContent = 'Anonymous';
+	} else {
+		return nameLabelEl.textContent = event.currentTarget.value;
+	}
 }
