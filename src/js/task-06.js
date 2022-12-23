@@ -3,12 +3,13 @@ console.log(inputEl);
 inputEl.addEventListener('blur', validValue);
 
 function validValue(event) {
-	//console.log(event.currentTarget.value);
 	const lengthEvent = event.currentTarget.value.split('').length;
-	//console.log(lengthEvent);
+	
 	if (lengthEvent >= inputEl.attributes[2].value) {
 		inputEl.classList.add('valid');
+		inputEl.classList.remove('invalid')
 	} else {
 		inputEl.classList.add('invalid');
+		inputEl.classList.remove('valid')
 	}
 }
