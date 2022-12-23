@@ -7,5 +7,4 @@ inputEl.addEventListener('input', onInputChange);
 function onInputChange(event) {
 	console.log(event.currentTarget.value);
 	nameLabelEl.textContent = event.currentTarget.value;
-	
 }
